@@ -1,0 +1,30 @@
+.imgCardStrip {
+  border: 1px solid #a3acb7;
+  display: flex;
+  padding: 12px;
+  margin: 12px;
+  border-radius: 8px;
+  background: aliceblue;
+  h4 {
+    margin: 0px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1rem;
+    letter-spacing: 0em;
+  }
+  img {
+    max-height: 100px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .content {
+    .description {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    padding: 0 12px;
+  }
+}

@@ -1,0 +1,76 @@
+.card {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  width: 100%;
+  max-width: 345px;
+  .cardContent {
+    padding: 16px;
+  }
+  img {
+    max-height: 140px;
+    width: 100%;
+    object-fit: cover;
+  }
+  h4 {
+    margin: 0px 0px 0.35em;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.334;
+    letter-spacing: 0em;
+  }
+  p {
+    margin: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  button {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    min-width: 64px;
+    padding: 4px 8px;
+    margin: 6px 0;
+    border-radius: 4px;
+    background: #ffc00e;
+    border: none;
+    color: #2a2d31;
+  }
+
+  .trophy-animation {
+    display: inline-block;
+    animation-name: shake;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px) rotate(-5deg);
+    }
+    50% {
+      transform: translateX(5px) rotate(5deg);
+    }
+    75% {
+      transform: translateX(-5px) rotate(-5deg);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
