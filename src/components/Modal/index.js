@@ -6,6 +6,8 @@ import ImgCardStrip from "../ImgCardStrip";
 const Modal = ({ setIsOpen, films, currentShip }) => {
   const [filmsData, setFilmsData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
+  //Request film data for specific spaceships based on the film id
   const getFilmData = useCallback(async (id) => {
     try {
       setIsLoading(true);
@@ -53,7 +55,6 @@ const Modal = ({ setIsOpen, films, currentShip }) => {
                   .filter((film) => film?.url)
                   .map((film) => (
                     <>
-                      <p>Card</p>
                       <ImgCardStrip key={film.url} film={film} />
                     </>
                   ))}
