@@ -47,12 +47,22 @@ const Modal = ({ setIsOpen, films, currentShip }) => {
             <RiCloseLine style={{ marginBottom: "-3px" }} />
           </button>
           <div className="modalContent">
-            {!isLoading &&
-              filmsData &&
-              filmsData.map(
-                (film) => film && film.url && <ImgCardStrip film={film} />
-              )}
-            {isLoading && <div className="loader">Loading...</div>}
+            {!isLoading && filmsData?.length > 0 && (
+              <>
+                {filmsData
+                  .filter((film) => film?.url)
+                  .map((film) => (
+                    <>
+                      <p>Card</p>
+                      <ImgCardStrip key={film.url} film={film} />
+                    </>
+                  ))}
+              </>
+            )}
+
+            {isLoading && filmsData.length === 0 && (
+              <div className="loader">Loading...</div>
+            )}
           </div>
         </div>
       </div>

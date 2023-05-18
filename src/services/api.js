@@ -1,9 +1,3 @@
-// import axios from "axios";
-
-// export const api = axios.create({
-//   baseURL: "https://swapi.dev/api/",
-// });
-
 const BASE_URL = "https://swapi.dev/api/"; // Replace with your API base URL
 
 // Helper function to handle response data
