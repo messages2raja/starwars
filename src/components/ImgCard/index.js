@@ -10,7 +10,7 @@ export default function ImgCard({
   setCurrentShip,
 }) {
   const [imageError, setImageError] = useState(false);
-
+  //To handle when no images are retrived from the server for specific spaceship request
   const handleImageError = () => {
     setImageError(true);
   };

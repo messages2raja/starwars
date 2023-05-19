@@ -1,6 +1,6 @@
 import { getUrlId } from "../../Utils/getUrlId";
 import "./styles.scss";
-const ImgCardStrip = ({ film }) => {
+export default function ImgCardStrip({ film }) {
   return (
     <div className="imgCardStrip">
       <img
@@ -24,5 +24,4 @@ const ImgCardStrip = ({ film }) => {
       </div>
     </div>
   );
-};
-export default ImgCardStrip;
+}
